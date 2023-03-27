@@ -95,6 +95,7 @@ function buy(id) {
     applyPromotionsCart();
 }
 
+
 // Exercise 2
 function cleanCart() {
     //checks if the cartList array has at least one element 
@@ -113,7 +114,7 @@ function cleanCart() {
             document.getElementById('cart_list').innerHTML = "";
             document.getElementById('total_price').innerHTML = "0.00";
             document.getElementById('count_product').innerHTML = 0;
-            console.log("Exercici 2: ", cartList);
+            console.log("Exercici 2: ", cart);
         }
     //If user cancels the confirmation dialog box by clicking the "Cancel".
     }else{
@@ -219,7 +220,8 @@ function printCart() {
     let chain = '';
 
     //Call functions
-    generateCart();
+    //generateCart();
+    addToCart();
     applyPromotionsCart();
 
     // Show the products from cart
@@ -253,6 +255,7 @@ function addToCart(id) {
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cart array or update its quantity in case it has been added previously.
 }
+
 
 // Exercise 8
 function removeFromCart(id) {

@@ -1,4 +1,5 @@
 
+
 // Exercise 6
 //variable form  it will hold a html id 
 const form = document.getElementById("form");//access to form
