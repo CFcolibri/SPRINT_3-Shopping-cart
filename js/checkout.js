@@ -6,6 +6,8 @@ const form = document.getElementById("form");//access to form
 //we can call the variable inputs to select all inputs of id form. 
 const inputs = document.querySelectorAll("#form input");// access to all inputs of form id.
 
+
+
 //object exp holds all regex expretions that will validate fields later. 
 const exp = {
   names: /^[a-zA-ZÀ-ÿ\s]{3,16}$/, // Letras y espacios, pueden llevar acentos.
@@ -101,7 +103,9 @@ function validate() {
 	//Checks if the error variable is equal to 0. If it is display alert message.
 	if(error==0){
 		alert("Successful Checkout");
+		return true;
 	}
+	return false;
 
 }
 
@@ -112,6 +116,7 @@ function validate() {
 form.addEventListener('sumbmit', (e) => {
 	//Prevents to submit the form to the server and reload the page if is not correct. 
 	e.preventDefault();
+	
 	//calls fuction to validate input fields.
 	validate();
 });
